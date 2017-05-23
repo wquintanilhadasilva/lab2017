@@ -1,0 +1,33 @@
+<h5>{{acao}} Aluno</h5>
+
+<div class="row">
+  <div class="col s12">
+  <div class="row">
+    <div class="input-field col s12">
+      <i class="material-icons prefix">code</i>
+      <input class="validate" onfocus="true" placeholder="#" disabled id="campo_id" type="text" [(ngModel)]="aluno.id" value="#">
+      <label class="active" for="campo_id">Id</label>
+    </div>
+  </div>
+  <div class="col s12">
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="material-icons prefix">account_circle</i>
+        <input onfocus="true" placeholder="Nome" id="campo_nome" type="text" [(ngModel)]="aluno.nome" class="validate">
+        <label class="active" for="campo_nome">Nome do aluno</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="material-icons prefix">email</i>
+        <input onfocus="true" placeholder="E-mail" id="campo_email" type="email" [(ngModel)]="aluno.email" class="validate">
+        <label class="active" for="campo_email">E-mail</label>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p>
+  <button class="waves-effect waves-light btn" (click)="goBack()">Fechar</button>
+  <button *ngIf="novo" class="waves-effect waves-light blue btn" (click)="gravar()">Gravar</button>
+</p>
