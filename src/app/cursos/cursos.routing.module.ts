@@ -6,13 +6,13 @@ import { CursoDetalheComponent } from './curso-detalhe/curso-detalhe.component';
 import { CursoNaoEncontradoComponent } from './curso-nao-encontrado/curso-nao-encontrado.component';
 
 const appRoutes: Routes = [
-    {path: 'cursos', component: CursosComponent},
+    {path: '', component: CursosComponent},
     {path: 'naoEncontrado/:id', component: CursoNaoEncontradoComponent},
-    {path: 'curso/:id', component: CursoDetalheComponent}
+    {path: ':id', component: CursoDetalheComponent}
 ];
 
 @NgModule({
-    imports:[RouterModule.forRoot(appRoutes)],
+    imports:[RouterModule.forChild(appRoutes)],
     exports:[RouterModule]
 })
 export class CursosRoutingModule{}
