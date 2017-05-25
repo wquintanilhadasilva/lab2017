@@ -9,6 +9,8 @@ import { AlunoDetalheComponent } from './aluno-detalhe/aluno-detalhe.component';
 import { AlunosService } from './alunos.service';
 import { AlunoNaoEncontradoComponent } from './aluno-nao-encontrado/aluno-nao-encontrado.component';
 
+import { AlunosGuard } from './guards/alunos.guard';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -21,7 +23,8 @@ import { AlunoNaoEncontradoComponent } from './aluno-nao-encontrado/aluno-nao-en
     AlunoDetalheComponent, AlunoNaoEncontradoComponent
   ],
   providers: [
-    AlunosService
+    AlunosService,
+    AlunosGuard
   ]
 })
 export class AlunosModule { }
