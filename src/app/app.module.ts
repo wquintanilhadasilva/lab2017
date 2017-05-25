@@ -32,7 +32,7 @@ import { CanDeactivateGuard } from './guards/can-deactivate.guard';
     AuthService,
     AuthGuard,
     CursosGuard,
-    CanDeactivateGuard
+    CanDeactivateGuard    
   ],
   bootstrap: [AppComponent]
 })

@@ -10,6 +10,7 @@ import { AlunosService } from './alunos.service';
 import { AlunoNaoEncontradoComponent } from './aluno-nao-encontrado/aluno-nao-encontrado.component';
 
 import { AlunosGuard } from './guards/alunos.guard';
+import { AlunoDetalheResolver } from './guards/aluno-detalhe.resolver';
 
 @NgModule({
   imports: [
@@ -24,7 +25,9 @@ import { AlunosGuard } from './guards/alunos.guard';
   ],
   providers: [
     AlunosService,
-    AlunosGuard
+    AlunosGuard,
+    AlunoDetalheResolver,
+    AlunosService
   ]
 })
 export class AlunosModule { }
