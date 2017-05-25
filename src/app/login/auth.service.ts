@@ -6,7 +6,7 @@ import { Usuario } from './usuario';
 @Injectable()
 export class AuthService {
 
-  private autenticado: boolean = false;
+  private static autenticado: boolean = false;
   usuarioAutenticadoEmiter = new EventEmitter<boolean>();
 
   constructor(private router: Router) { }
@@ -14,16 +14,16 @@ export class AuthService {
   fazerLogin(usuario: Usuario){
     if(usuario.nome === 'usuario@email.com' && usuario.senha === '123456'){
       this.router.navigate(['/']);
-      this.autenticado = true;
-      this.usuarioAutenticadoEmiter.emit(this.autenticado);
+      AuthService.autenticado = true;
+      this.usuarioAutenticadoEmiter.emit(AuthService.autenticado);
     }else{
-      this.autenticado = false;
-      this.usuarioAutenticadoEmiter.emit(this.autenticado);
+      AuthService.autenticado = false;
+      this.usuarioAutenticadoEmiter.emit(AuthService.autenticado);
     }
   }
 
   usuarioEstaAutenticado() {
-    return this.autenticado;
+    return AuthService.autenticado;
   }
 
 }
