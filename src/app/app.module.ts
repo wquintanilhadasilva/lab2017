@@ -13,6 +13,7 @@ import { LoginComponent } from './login/login.component';
 import { AuthService } from './login/auth.service';
 import { AuthGuard } from './guards/auth.guard';
 import { CursosGuard } from './guards/cursos.guard';
+import { CanDeactivateGuard } from './guards/can-deactivate.guard';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { CursosGuard } from './guards/cursos.guard';
   providers: [
     AuthService,
     AuthGuard,
-    CursosGuard
+    CursosGuard,
+    CanDeactivateGuard
   ],
   bootstrap: [AppComponent]
 })

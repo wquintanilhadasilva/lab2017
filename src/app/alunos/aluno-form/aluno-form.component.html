@@ -13,7 +13,7 @@
     <div class="row">
       <div class="input-field col s12">
         <i class="material-icons prefix">account_circle</i>
-        <input onfocus="true" placeholder="Nome" id="campo_nome" type="text" [(ngModel)]="aluno.nome" class="validate">
+        <input (input)="onInput()" onfocus="true" placeholder="Nome" id="campo_nome" type="text" [(ngModel)]="aluno.nome" class="validate">
         <label class="active" for="campo_nome">Nome do aluno</label>
       </div>
     </div>
